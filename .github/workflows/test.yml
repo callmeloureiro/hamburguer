@@ -1,0 +1,27 @@
+name: "units-test"
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+      - "releases/*"
+
+jobs:
+  # unit tests
+  units:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - run: npm ci
+      - run: npm test
+
+  # test action works running from the graph
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: ./
+        with:
+          DISCORD_WEBHOOK_ID: "717126286803337286"
+          DISCORD_WEBHOOK_TOKEN: "6Kdv_EqdnVGItQ9Nr4xcoapefOJO7XdV-qtnX6SOg_41flzOqb5PK3EcUNbxwevdM5YA"
+          state: "processing"

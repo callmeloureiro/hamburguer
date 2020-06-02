@@ -1,0 +1,16 @@
+name: "Hamburguer"
+description: "Notify discord"
+inputs:
+  state:
+    description: "(processing|completed|fail)"
+    required: true
+    default: "processing"
+  DISCORD_WEBHOOK_ID:
+    required: true
+    default: ""
+  DISCORD_WEBHOOK_TOKEN:
+    required: true
+    default: ""
+runs:
+  using: "node12"
+  main: "dist/index.js"
