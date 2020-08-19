@@ -31,6 +31,10 @@ const hamburger = async function ({
               name: "Repositório",
               value: payload.repository.html_url,
             },
+            {
+              name: "Branch",
+              value: payload.repository.name,
+            },
           ],
         },
       ],
