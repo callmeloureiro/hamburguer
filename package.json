@@ -20,7 +20,7 @@
   "author": "Matheus Loureiro",
   "license": "MIT",
   "dependencies": {
-    "@actions/core": "^1.2.4",
+    "@actions/core": "^1.2.6",
     "@actions/github": "^2.2.0",
     "node-fetch": "^2.6.0"
   },
